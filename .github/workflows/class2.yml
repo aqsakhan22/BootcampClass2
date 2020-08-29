@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: Setup Node.js environment
-      uses: actions/setup-node@v2-beta
+      uses: actions/setup-node@v1.4.3
       with:
        version: 12 # optional
      
@@ -40,15 +40,9 @@ jobs:
       run: npm install -g surge
       
     - name: surge deploy
-      run: surge ./build http://miscreant-surprise.surge.sh/ --token ${{secrets.surge_key}}
+      run: surge ./build  http://bootcamp2020_sessionclass2.surge.sh/ --token ${{secrets.surge_key}}
       
     
-
-       
-   
-       
-       
-       
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
